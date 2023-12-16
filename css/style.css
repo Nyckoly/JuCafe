@@ -22,13 +22,10 @@ body{
 }
 .top{
     background-color:#982417;
-    height: 176px;
     padding: 8px 16px 0px 16px;
-}
-.top__logo{
-    width: 264px;
-    margin: auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .menu__list{
     display: flex;
@@ -51,7 +48,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 528px;;
+    height: 528px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -218,12 +215,28 @@ body{
     align-items: center;
     gap: 64px;
     align-self: center;
+    flex-wrap: wrap;
 
+}
+.card__txt{
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+.txt__description{
+    align-self: self-start;
+    padding-left: 8px;
 }
 .styles__card{
     display: flex;
     padding: 16px;
     flex-direction: column;
+}
+.image{
+    width: 100%;
+}
+.imagemob{
+    display: none;
 }
 .card__title{
     display: flex;
@@ -277,23 +290,81 @@ body{
     font-size: 24px;
     font-weight: 400;
 }
-.fa-brands, .fa-solid{
+.fa-brands, .fa-phone{
     font-size: 32px;
     color: #FFF0D1;
 
 }
-    @media screen and (max-width:768px){
-        .menu__logo{
-            display: block;
-        }
-        .menu__list{
-            display: none;
-        }
-        .franchisee__img{
-            display: none;
-        }
-        .title__text-two{
-            border: none;
-            text-align: center;
-        }
+
+@media screen and (max-width:768px){
+    .top{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0px 16px;
     }
+    .menu__logo{
+        display: block;
+    }
+    .fa-bars{
+        font-size: 50px;
+        color: #FFF0D1;
+    }
+    .menu__list{
+        display: none;
+    }
+    .main__banner{
+        align-items: end;
+        height: 528px;
+    }
+    .banner-txt{
+        background-color: #FFF;
+        gap: 8px;
+        padding: 0px 16px;
+    }
+    .franchisee__img{
+        display: none;
+    }
+    .title__text-two{
+        border: none;
+        text-align: center;
+    }
+    .benefits__cards{
+        gap: 16px;
+    }
+    .business{
+        padding: 16px 0px;
+    }
+    .business__styles{
+        gap: 16px;
+    }
+    .business__title{
+        align-self: center;
+    }
+    .title__text{
+        border: none;
+        font-size: 24px;
+    }
+    .image{
+        display: none;
+    }
+    .imagemob{
+        width: 100%;
+        display: block;
+    }
+    .contacts__social-media, .contacts__telephone{
+        gap: 8px;
+    }
+    .social-media__txt, .telephone__txt{
+        font-size: 20px;
+    }
+    .footer__contacts{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .footer__developer{
+        font-size: 16px
+    }
+    .fa-brands, .fa-phone{
+        font-size: 24px;
+    }
+}
