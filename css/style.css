@@ -17,6 +17,10 @@
 body{
     min-width: 360px;
 }
+.width{
+    max-width: 1440px;
+    align-self: center;
+}
 .menu__logo{
     display: none;
 }
@@ -35,26 +39,29 @@ body{
     justify-content: center;
     align-items: center;
     gap: 16px;
+    height: 60px
 }
 .list__items{
     padding: 0px 32px 8px;
+    cursor: pointer;
 
 }
 .list__items:hover{
     border-bottom: solid #fff0d1 8px;
 }
 .main__banner{
+    width: 100%;
     background-image: url("../img/banner_Dsk.png");
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    background-position: center;
     height: 528px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 .banner-txt{
-    background: rgba(255, 255, 255, 0.90);
+    background: #ffffffe6;
     display: flex;
     flex-direction: column;
     gap: 26px;
@@ -79,6 +86,9 @@ body{
 .txt-btns{
     display: flex;
     gap: 26px;
+}
+.btns__one, .btns__two{
+    cursor: pointer;
 }
 .btns__one{
     display: flex;
@@ -107,14 +117,18 @@ body{
     gap: 16px;
     flex-wrap: wrap;
 }
+
 .title__text{
+    display: block;
     color: #982417;
     font-family: Lekton;
     font-size: 32px;
     font-weight: 700;
     padding-left: 16px;
     border-left: 10px solid #982417;
+    text-align: left;
 }
+
 .benefits__cards{
     display: flex;
     justify-content: center;
@@ -234,6 +248,7 @@ body{
 }
 .image{
     width: 100%;
+    display: block;
 }
 .imagemob{
     display: none;
@@ -295,7 +310,6 @@ body{
     color: #FFF0D1;
 
 }
-
 @media screen and (max-width:768px){
     .top{
         flex-direction: row-reverse;
@@ -304,6 +318,7 @@ body{
     }
     .menu__logo{
         display: block;
+        cursor: pointer;
     }
     .fa-bars{
         font-size: 50px;
@@ -315,11 +330,22 @@ body{
     .main__banner{
         align-items: end;
         height: 528px;
+        background-position-x: -110px;
+        background-position-y: -100px;
+        background-size: cover;
     }
     .banner-txt{
         background-color: #FFF;
         gap: 8px;
-        padding: 0px 16px;
+        padding: 32px 16px;
+    }
+    .txt__title{
+        font-size: 36px;
+        text-align: right;
+    }
+    .txt__subtitle{
+        font-size: 20px;
+        text-align: right;
     }
     .franchisee__img{
         display: none;
